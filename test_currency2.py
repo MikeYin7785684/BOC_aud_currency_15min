@@ -27,7 +27,7 @@ if __name__ == "__main__":
                 print("Changes detected:")
                 print(f"aud: {previous_rate} -> {current_rate}")
             else:
-                print("No changes detected.")
+                print(f"No changes detected:current{current_rate}")
             previous_rate = current_rate
             time.sleep(900)  # Sleep for 15 minutes (900 seconds)
             
