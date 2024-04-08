@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import time
+from datetime import datetime
  
 def fetch_exchange_rates():
     url = 'https://www.boc.cn/sourcedb/whpj/'
@@ -19,7 +20,7 @@ if __name__ == "__main__":
     
     while True:
         try:
-            print("\nFetching currency exchange rates...")
+            print(f"\n{datetime.now()}Fetching currency exchange rates...")
             current_rate = fetch_exchange_rates()
             
             if previous_rate!=current_rate:
